@@ -1,2 +1,2 @@
 # ATTRITION
-Supporting material for our RL-based Trojan insertion work at CCS 2022
+Supporting material for our RL-based Trojan insertion work at CCS 2022.
