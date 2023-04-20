@@ -1,0 +1,153 @@
+** Standard Cells with FreePDK45 
+
+** Library name: OSU_FreePDK45_scells
+** Cell name: AND2X1
+** View name: schematic
+.subckt AND2X1 a b y gnd vdd
+m0 a_2_6__ a vdd vdd PMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m1 vdd b a_2_6__ vdd PMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m2 y a_2_6__ vdd vdd PMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m3 a_9_6__ a a_2_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m4 gnd b a_9_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m5 y a_2_6__ gnd gnd NMOS_VTG L=50e-9 W=250e-9 AD=0 AS=0 PD=0 PS=0 M=1
+.ends AND2X1
+** End of subcircuit definition.
+
+** Library name: OSU_FreePDK45_scells
+** Cell name: INVX1
+** View name: schematic
+.subckt INVX1 a y gnd vdd
+m0 y a vdd vdd PMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m1 y a gnd gnd NMOS_VTG L=50e-9 W=250e-9 AD=0 AS=0 PD=0 PS=0 M=1
+.ends INVX1
+** End of subcircuit definition.
+
+** Library name: OSU_FreePDK45_scells
+** Cell name: INVX8
+** View name: schematic
+.subckt INVX8 a y gnd vdd
+m0 y a vdd vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m1 vdd a y vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m2 y a vdd vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m3 vdd a y vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m4 y a gnd gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m5 gnd a y gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m6 y a gnd gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m7 gnd a y gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+.ends INVX8
+** End of subcircuit definition.
+
+** Library name: OSU_FreePDK45_scells
+** Cell name: NOR2X1
+** View name: schematic
+.subckt NOR2X1 a b y gnd vdd
+m2 y a gnd gnd NMOS_VTG L=50e-9 W=250e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m3 gnd b y gnd NMOS_VTG L=50e-9 W=250e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m1 y b a_9_54__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m0 a_9_54__ a vdd vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+.ends NOR2X1
+** End of subcircuit definition.
+
+** Library name: OSU_FreePDK45_scells
+** Cell name: NAND2X1
+** View name: schematic
+.subckt NAND2X1 a b y gnd vdd
+m0 y a vdd vdd PMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m1 vdd b y vdd PMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m3 y b a_9_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m2 a_9_6__ a gnd gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+.ends NAND2X1
+** End of subcircuit definition.
+
+** Library name: OSU_FreePDK45_scells
+** Cell name: OR2X1
+** View name: schematic
+.subckt OR2X1 a b y gnd vdd
+m0 a_9_54__ a a_2_54__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m1 vdd b a_9_54__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m2 y a_2_54__ vdd vdd PMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m4 gnd b a_2_54__ gnd NMOS_VTG L=50e-9 W=250e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m3 a_2_54__ a gnd gnd NMOS_VTG L=50e-9 W=250e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m5 y a_2_54__ gnd gnd NMOS_VTG L=50e-9 W=250e-9 AD=0 AS=0 PD=0 PS=0 M=1
+.ends OR2X1
+** End of subcircuit definition.
+
+** Library name: OSU_FreePDK45_scells
+** Cell name: XOR2X1
+** View name: schematic
+.subckt XOR2X1 a b y gnd vdd
+m2 y a a_18_54__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m1 a_18_54__ a_13_43__ vdd vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m3 a_35_54__ a_2_6__ y vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m4 vdd b a_35_54__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m0 vdd a a_2_6__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m5 a_13_43__ b vdd vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m8 y a_2_6__ a_18_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m7 a_18_6__ a_13_43__ gnd gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m9 a_35_6__ a y gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m10 gnd b a_35_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m6 gnd a a_2_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m11 a_13_43__ b gnd gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+.ends XOR2X1
+** End of subcircuit definition.
+
+** Library name: OSU_FreePDK45_scells
+** Cell name: XNOR2X1
+** View name: schematic
+.subckt XNOR2X1 a b y gnd vdd
+m2 y a_2_6__ a_18_54__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m1 a_18_54__ a_12_41__ vdd vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m3 a_35_54__ a y vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m4 vdd b a_35_54__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m0 vdd a a_2_6__ vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m5 a_12_41__ b vdd vdd PMOS_VTG L=50e-9 W=1e-6 AD=0 AS=0 PD=0 PS=0 M=1
+m8 y a a_18_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m7 a_18_6__ a_12_41__ gnd gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m9 a_35_6__ a_2_6__ y gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m10 gnd b a_35_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m6 gnd a a_2_6__ gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+m11 a_12_41__ b gnd gnd NMOS_VTG L=50e-9 W=500e-9 AD=0 AS=0 PD=0 PS=0 M=1
+.ends XNOR2X1
+** End of subcircuit definition.
+
+.subckt BUFX2 A Y gnd vdd
+M0 vdd A a_2_6# vdd PMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M1 Y a_2_6# vdd vdd PMOS_VTG w=1u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M2 gnd A a_2_6# gnd NMOS_VTG w=0.25u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M3 Y a_2_6# gnd gnd NMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+.ends BUFX2
+
+.subckt OAI21X1 A B C Y gnd vdd
+M0 a_9_54# A vdd vdd PMOS_VTG w=1u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M1 Y B a_9_54# vdd PMOS_VTG w=1u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M2 vdd C Y vdd PMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M3 gnd A a_2_6# gnd NMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M4 a_2_6# B gnd gnd NMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M5 Y C a_2_6# gnd NMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+.ends OAI21X1
+
+.subckt NAND3X1 A B C Y gnd vdd
+M0 Y A vdd vdd PMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M1 vdd B Y vdd PMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M2 Y C vdd vdd PMOS_VTG w=0.5u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M3 a_9_6# A gnd gnd NMOS_VTG w=0.75u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M4 a_14_6# B a_9_6# gnd NMOS_VTG w=0.75u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+M5 Y C a_14_6# gnd NMOS_VTG w=0.75u l=0.05u
++ ad=0p pd=0u as=0p ps=0u 
+.ends NAND3X1
+
