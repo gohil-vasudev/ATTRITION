@@ -1,0 +1,1 @@
+The HT-infested designs are uploaded in a tar format. For example, c7552.tar.gz contains ATTRITION generated HT-infested files.
